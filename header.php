@@ -31,24 +31,36 @@
 		<div class="title-bar" data-responsive-toggle="site-navigation">
 			<button class="menu-icon" type="button" data-toggle="mobile-menu"></button>
 			<div class="title-bar-title">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				</a>
+
 			</div>
 		</div>
-
-		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
+		<div class="row">
+		<div class="small-2 large-4 columns">
 			<div class="top-bar-left">
 				<ul class="menu">
-					<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
+					<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo.jpg" alt="Magyar Képzőművészek és Iparművészek Szövetsége" width="" height="" />
+					</a></li>
 				</ul>
 			</div>
-			<div class="top-bar-right">
-				<?php foundationpress_top_bar_r(); ?>
+		</div>
+		<div class="small-10 large-8 columns">
+			<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
 
-				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>
-					<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
-				<?php endif; ?>
-			</div>
-		</nav>
+				<div class="top-bar-right">
+					<?php foundationpress_top_bar_r(); ?>
+
+					<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>
+						<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
+					<?php endif; ?>
+				</div>
+			</nav>
+
+		</div>
+		<div class="large-8 large-offset-4 columns">8, offset 4</div>
+		</div>
 	</header>
 
 	<section class="container">
